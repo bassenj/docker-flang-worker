@@ -60,6 +60,7 @@ WORKDIR /build-flang
 RUN git clone --progress https://github.com/flang-compiler/flang.git
 
 WORKDIR /build-flang/flang
+RUN git checkout flang_20180319
 
 WORKDIR /build-flang/flang/build
 RUN cmake .. -DCMAKE_BUILD_TYPE=MinSizeRel -DCMAKE_INSTALL_PREFIX=/usr/local/ \
